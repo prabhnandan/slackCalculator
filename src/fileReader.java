@@ -18,6 +18,7 @@ public class fileReader {
     private static ArrayList<Edge> edges = new ArrayList<Edge>();
     private static ArrayList<Processor> processors = new ArrayList<>();
     private static int numProcessors;
+    private static int scheduleLength;
 
     public static void read(File file) {
         try {
@@ -25,6 +26,7 @@ public class fileReader {
             GXLDocument doc = new GXLDocument(file);
             GXLGraph elements = doc.getDocumentElement().getGraphAt(0);
             numProcessors = ((GXLInt) elements.getChildAt(5).getChildAt(0)).getIntValue();
+            scheduleLength = ((GXLInt) elements.getChildAt(6).getChildAt(0)).getIntValue();
             for (int i = 0; i < elements.getChildCount(); i++) {
                 if (elements.getChildAt(i) instanceof GXLNode) {
                     GXLNode n = (GXLNode) elements.getChildAt(i);
@@ -42,6 +44,7 @@ public class fileReader {
                 }
             }
             setPredecessors();
+            setSuccessors();
             setupProcessors();
             return;
         } catch (SAXException e) {
@@ -75,7 +78,19 @@ public class fileReader {
                         if (e.getStartNode().equals(n2.getId())) n.addPredecessor(n2, e.getWeight());
                     }
                 }
-                ;
+            }
+        }
+        return;
+    }
+
+    private static void setSuccessors() {
+        for (Edge e : edges) {
+            for (Node n : nodes) {
+                if (e.getStartNode().equals(n.getId())) {
+                    for (Node n2 : nodes) {
+                        if (e.getEndNode().equals(n2.getId())) n.addSuccessor(n2, e.getWeight());
+                    }
+                }
             }
         }
         return;
@@ -89,5 +104,9 @@ public class fileReader {
             }
             processors.add(processor);
         }
+    }
+
+    public static int getScheduleLength() {
+        return scheduleLength;
     }
 }

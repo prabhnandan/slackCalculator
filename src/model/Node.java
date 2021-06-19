@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public class Node {
     HashMap<Node, Integer> predecessors = new HashMap<>();
+    HashMap<Node, Integer> successors = new HashMap<>();
     private String id;
     private int weight;
     private int startTime;
@@ -36,6 +37,14 @@ public class Node {
 
     public void addPredecessor(Node predecessor, Integer weight) {
         this.predecessors.put(predecessor, weight);
+    }
+
+    public void addSuccessor(Node successor, Integer weight) {
+        this.successors.put(successor, weight);
+    }
+
+    public HashMap<Node, Integer> getSuccessors() {
+        return successors;
     }
 
     public int getWeight() {
