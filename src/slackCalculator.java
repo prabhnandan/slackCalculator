@@ -4,9 +4,8 @@ import model.Slack;
 import model.SlackSorter;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class slackCalculator {
     private static ArrayList<Slack> allSlackTimes = new ArrayList<>();
@@ -86,5 +85,21 @@ public class slackCalculator {
             }
         }
         System.out.println(totalSlack);
+    }
+
+    private void multipleScheduleCalculate(String folderPath) {
+        // Get Folder Contents
+        File f = new File(folderPath);
+        List<String> files = Arrays.asList(Objects.requireNonNull(f.list()));
+        // Filter only .gxl files
+        List<String> gxlFiles = files.stream().filter(".gxl"::equals).collect(Collectors.toList());
+        // Calculate Slack for each file
+        for (String gxlFile : gxlFiles) {
+            fileReader.read(new File(folderPath + gxlFile).getAbsoluteFile());
+            calculateSlack(fileReader.getProcessors());
+            calculateSlack2(fileReader.getProcessors());
+            calculateTotalSlack(allSlackTimes, fileReader.getNumProcessors());
+            allSlackTimes.clear();
+        }
     }
 }
