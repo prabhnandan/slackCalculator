@@ -4,6 +4,7 @@ import model.Slack;
 import model.SlackSorter;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -11,6 +12,13 @@ public class slackCalculator {
     private static ArrayList<Slack> allSlackTimes = new ArrayList<>();
 
     public static void main(String[] args) {
+        Runtime rt = Runtime.getRuntime();
+        try {
+            Process process = rt.exec("java -jar parcschedule-1.0-jar-with-dependencies.jar -f src/data/in.gxl -o src/data/out.gxl -clusterer dcp");
+            process.waitFor();
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
         fileReader.read(new File("src/data/out.gxl").getAbsoluteFile());
         calculateSlack(fileReader.getProcessors());
         calculateSlack2(fileReader.getProcessors());
@@ -65,6 +73,7 @@ public class slackCalculator {
 
     private static void calculateTotalSlack(ArrayList<Slack> allSlackTimes, int numProcessors) {
         int totalSlack = 0;
+        int totalUnscheduledTime = 0;
 
         for(int i = 0; i< numProcessors; i++){
             ArrayList<Slack> slackInProcessor = new ArrayList<>();
@@ -80,11 +89,19 @@ public class slackCalculator {
                     slackInProcessor.remove(slackIndex+1);
                 }
             }
-            for(Slack slack : slackInProcessor){
+            for(int j = 0; j< slackInProcessor.size(); j++){
+                Slack slack = slackInProcessor.get(j);
                 totalSlack += slack.getAmount();
+                if(j == 0 ) totalUnscheduledTime += slack.getStartTime();
+                else if(j == slackInProcessor.size() - 1) totalUnscheduledTime += fileReader.getScheduleLength() - slack.getEndTime();
+                else totalUnscheduledTime += slackInProcessor.get(j+1).getStartTime() - slack.getEndTime();
             }
         }
-        System.out.println(totalSlack);
+        int totalScheduleTime = numProcessors * fileReader.getScheduleLength();
+        int idleTime = totalScheduleTime - totalUnscheduledTime;
+        System.out.println("Total processor time = "+totalScheduleTime);
+        System.out.println("Total slack time = "+ totalSlack+"("+String.format("%.2f",(float)totalSlack*100/totalScheduleTime)+"%)");
+        System.out.println("Total idle time = "+ idleTime+"("+String.format("%.2f",(float)idleTime*100/totalScheduleTime)+"%)");
     }
 
     private void multipleScheduleCalculate(String folderPath) {
