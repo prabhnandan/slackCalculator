@@ -4,6 +4,7 @@ import model.Slack;
 import model.SlackSorter;
 
 import java.io.File;
+import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -19,10 +20,7 @@ public class slackCalculator {
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
-        fileReader.read(new File("src/data/out.gxl").getAbsoluteFile());
-        calculateSlack(fileReader.getProcessors());
-        calculateSlack2(fileReader.getProcessors());
-        calculateTotalSlack(allSlackTimes, fileReader.getNumProcessors());
+        multipleScheduleCalculate("src/data");
     }
 
     public static void calculateSlack(ArrayList<Processor> processors) {
@@ -104,15 +102,14 @@ public class slackCalculator {
         System.out.println("Total idle time = "+ idleTime+"("+String.format("%.2f",(float)idleTime*100/totalScheduleTime)+"%)");
     }
 
-    private void multipleScheduleCalculate(String folderPath) {
-        // Get Folder Contents
-        File f = new File(folderPath);
-        List<String> files = Arrays.asList(Objects.requireNonNull(f.list()));
-        // Filter only .gxl files
-        List<String> gxlFiles = files.stream().filter(".gxl"::equals).collect(Collectors.toList());
+    private static void multipleScheduleCalculate(String folderPath) {
+        // Create filter for gxl files
+        FilenameFilter gxl = (f, name) -> name.endsWith("gxl");
+        // Get GXL Files in folder
+        File[] gxlFiles = Objects.requireNonNull(new File(folderPath).listFiles(gxl));
         // Calculate Slack for each file
-        for (String gxlFile : gxlFiles) {
-            fileReader.read(new File(folderPath + gxlFile).getAbsoluteFile());
+        for (File file : gxlFiles) {
+            fileReader.read(file);
             calculateSlack(fileReader.getProcessors());
             calculateSlack2(fileReader.getProcessors());
             calculateTotalSlack(allSlackTimes, fileReader.getNumProcessors());
