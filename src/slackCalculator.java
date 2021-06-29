@@ -23,12 +23,6 @@ public class slackCalculator {
             e.printStackTrace();
         }
         multipleScheduleCalculate("src/data");
-        fileReader.read(new File("src/data/out.gxl").getAbsoluteFile());
-        calculateSlack(fileReader.getProcessors());
-        calculateSlack2(fileReader.getProcessors());
-        calculateTotalSlack(allSlackTimes, fileReader.getNumProcessors());
-        ScheduleGraph chart = new ScheduleGraph();
-
     }
 
     public static ArrayList<Slack> getAllSlackTimes() {
@@ -126,7 +120,7 @@ public class slackCalculator {
             calculateSlack(fileReader.getProcessors());
             calculateSlack2(fileReader.getProcessors());
             calculateTotalSlack(allSlackTimes, fileReader.getNumProcessors());
-            allSlackTimes.clear();
+            new ScheduleGraph(allSlackTimes);
         }
     }
 }

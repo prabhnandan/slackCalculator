@@ -22,7 +22,6 @@ public class fileReader {
 
     public static void read(File file) {
         try {
-
             GXLDocument doc = new GXLDocument(file);
             GXLGraph elements = doc.getDocumentElement().getGraphAt(0);
             numProcessors = ((GXLInt) elements.getChildAt(5).getChildAt(0)).getIntValue();
