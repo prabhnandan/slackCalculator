@@ -5,11 +5,13 @@ public class Slack {
     private int startTime;
     private int endTime;
     private int processor;
+    private String fromNode;
 
-    public Slack(int startTime, int endTime, int processor) {
+    public Slack(int startTime, int endTime, int processor, String fromNode) {
         this.startTime = startTime;
         this.endTime = endTime;
         this.processor = processor;
+        this.fromNode = fromNode;
     }
 
     public Integer getStartTime() {
@@ -27,7 +29,12 @@ public class Slack {
     public void setEndTime(int endTime) {
         this.endTime = endTime;
     }
-    public int getAmount(){
+
+    public String getFromNode() {
+        return fromNode;
+    }
+
+    public int getAmount() {
         return this.endTime - this.startTime;
     }
 

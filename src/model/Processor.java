@@ -1,12 +1,12 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Processor {
     private ArrayList<Node> nodesScheduled = new ArrayList<>();
     private int id;
-    public Processor(int id){
+
+    public Processor(int id) {
         this.id = id;
     }
 
@@ -19,4 +19,8 @@ public class Processor {
         nodesScheduled.sort(new NodeSorter());
     }
 
+
+    public int getID() {
+        return this.id;
+    }
 }
