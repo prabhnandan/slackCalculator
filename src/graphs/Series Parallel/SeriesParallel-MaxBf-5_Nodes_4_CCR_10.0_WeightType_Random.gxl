@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gxl>
+	<graph id="SeriesParallel-MaxBf-5_Nodes_4_CCR_10.0_WeightType_Random">
+		<node id="0">
+			<attr name="Weight">
+				<int>7</int>
+			</attr>
+		</node>
+		<node id="1">
+			<attr name="Weight">
+				<int>4</int>
+			</attr>
+		</node>
+		<node id="2">
+			<attr name="Weight">
+				<int>9</int>
+			</attr>
+		</node>
+		<node id="3">
+			<attr name="Weight">
+				<int>3</int>
+			</attr>
+		</node>
+		<edge from="0" to="2">
+			<attr name="Weight">
+				<int>50</int>
+			</attr>
+		</edge>
+		<edge from="0" to="3">
+			<attr name="Weight">
+				<int>40</int>
+			</attr>
+		</edge>
+		<edge from="2" to="1">
+			<attr name="Weight">
+				<int>50</int>
+			</attr>
+		</edge>
+		<edge from="3" to="1">
+			<attr name="Weight">
+				<int>90</int>
+			</attr>
+		</edge>
+	</graph>
+</gxl>
