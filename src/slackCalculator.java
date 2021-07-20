@@ -1,18 +1,17 @@
+import com.opencsv.CSVWriter;
 import model.Node;
 import model.Processor;
 import model.Slack;
 import model.SlackSorter;
 
-import java.io.File;
-import java.io.FilenameFilter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+import java.io.*;
+import java.util.*;
 
 public class slackCalculator {
     private static ArrayList<Slack> allSlackTimes = new ArrayList<>();
+    static int totalScheduleTime;
+    static int totalSlack;
+    static int idleTime;
 
     public static void main(String[] args) {
         Runtime rt = Runtime.getRuntime();
@@ -76,7 +75,7 @@ public class slackCalculator {
     }
 
     private static void calculateTotalSlack(ArrayList<Slack> allSlackTimes, int numProcessors) {
-        int totalSlack = 0;
+        totalSlack = 0;
         int totalUnscheduledTime = 0;
 
         for (int i = 0; i < numProcessors; i++) {
@@ -102,11 +101,16 @@ public class slackCalculator {
                 else totalUnscheduledTime += slackInProcessor.get(j + 1).getStartTime() - slack.getEndTime();
             }
         }
-        int totalScheduleTime = numProcessors * fileReader.getScheduleLength();
-        int idleTime = totalScheduleTime - totalUnscheduledTime;
+        totalScheduleTime = numProcessors * fileReader.getScheduleLength();
+        idleTime = totalScheduleTime - totalUnscheduledTime;
         System.out.println("Total processor time = " + totalScheduleTime);
         System.out.println("Total slack time = " + totalSlack + "(" + String.format("%.2f", (float) totalSlack * 100 / totalScheduleTime) + "%)");
         System.out.println("Total idle time = " + idleTime + "(" + String.format("%.2f", (float) idleTime * 100 / totalScheduleTime) + "%)");
+        try {
+            writeToCSV();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private static void multipleScheduleCalculate(String folderPath) {
@@ -123,4 +127,14 @@ public class slackCalculator {
             new ScheduleGraph(allSlackTimes);
         }
     }
+
+    private static void writeToCSV () throws IOException {
+        // Writes Slack values to End of CSV File
+        FileWriter writer = new FileWriter("./src/output/out.csv");
+        CSVWriter CSVwriter = new CSVWriter(writer);
+        CSVwriter.writeNext(new String[] {String.valueOf(totalScheduleTime), String.valueOf(totalSlack),String.valueOf(idleTime)});
+        CSVwriter.close();
+    }
 }
+
+
