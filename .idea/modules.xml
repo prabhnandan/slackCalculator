@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/slackCalculator.iml" filepath="$PROJECT_DIR$/slackCalculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/slackCalculatorScript.iml" filepath="$PROJECT_DIR$/slackCalculatorScript.iml" />
     </modules>
   </component>
 </project>
