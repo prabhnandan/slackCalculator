@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gxl>
+	<graph id="InTree-Balanced-MaxBf-3_Nodes_6_CCR_10.0_WeightType_Random">
+		<node id="0">
+			<attr name="Weight">
+				<int>8</int>
+			</attr>
+		</node>
+		<node id="1">
+			<attr name="Weight">
+				<int>8</int>
+			</attr>
+		</node>
+		<node id="2">
+			<attr name="Weight">
+				<int>8</int>
+			</attr>
+		</node>
+		<node id="3">
+			<attr name="Weight">
+				<int>2</int>
+			</attr>
+		</node>
+		<node id="4">
+			<attr name="Weight">
+				<int>2</int>
+			</attr>
+		</node>
+		<node id="5">
+			<attr name="Weight">
+				<int>2</int>
+			</attr>
+		</node>
+		<edge from="1" to="0">
+			<attr name="Weight">
+				<int>35</int>
+			</attr>
+		</edge>
+		<edge from="2" to="0">
+			<attr name="Weight">
+				<int>106</int>
+			</attr>
+		</edge>
+		<edge from="3" to="0">
+			<attr name="Weight">
+				<int>71</int>
+			</attr>
+		</edge>
+		<edge from="4" to="1">
+			<attr name="Weight">
+				<int>53</int>
+			</attr>
+		</edge>
+		<edge from="5" to="1">
+			<attr name="Weight">
+				<int>35</int>
+			</attr>
+		</edge>
+	</graph>
+</gxl>

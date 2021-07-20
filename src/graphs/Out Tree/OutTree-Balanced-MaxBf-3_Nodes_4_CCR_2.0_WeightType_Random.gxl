@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gxl>
+	<graph id="OutTree-Balanced-MaxBf-3_Nodes_4_CCR_2.0_WeightType_Random">
+		<node id="0">
+			<attr name="Weight">
+				<int>4</int>
+			</attr>
+		</node>
+		<node id="1">
+			<attr name="Weight">
+				<int>5</int>
+			</attr>
+		</node>
+		<node id="2">
+			<attr name="Weight">
+				<int>6</int>
+			</attr>
+		</node>
+		<node id="3">
+			<attr name="Weight">
+				<int>6</int>
+			</attr>
+		</node>
+		<edge from="0" to="1">
+			<attr name="Weight">
+				<int>18</int>
+			</attr>
+		</edge>
+		<edge from="0" to="2">
+			<attr name="Weight">
+				<int>18</int>
+			</attr>
+		</edge>
+		<edge from="0" to="3">
+			<attr name="Weight">
+				<int>7</int>
+			</attr>
+		</edge>
+	</graph>
+</gxl>

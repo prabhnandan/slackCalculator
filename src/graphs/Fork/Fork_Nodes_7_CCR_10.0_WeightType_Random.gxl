@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gxl>
+	<graph id="Fork_Nodes_7_CCR_10.0_WeightType_Random">
+		<node id="0">
+			<attr name="Weight">
+				<int>10</int>
+			</attr>
+		</node>
+		<node id="1">
+			<attr name="Weight">
+				<int>9</int>
+			</attr>
+		</node>
+		<node id="2">
+			<attr name="Weight">
+				<int>10</int>
+			</attr>
+		</node>
+		<node id="3">
+			<attr name="Weight">
+				<int>2</int>
+			</attr>
+		</node>
+		<node id="4">
+			<attr name="Weight">
+				<int>8</int>
+			</attr>
+		</node>
+		<node id="5">
+			<attr name="Weight">
+				<int>10</int>
+			</attr>
+		</node>
+		<node id="6">
+			<attr name="Weight">
+				<int>10</int>
+			</attr>
+		</node>
+		<edge from="0" to="1">
+			<attr name="Weight">
+				<int>101</int>
+			</attr>
+		</edge>
+		<edge from="0" to="2">
+			<attr name="Weight">
+				<int>118</int>
+			</attr>
+		</edge>
+		<edge from="0" to="3">
+			<attr name="Weight">
+				<int>135</int>
+			</attr>
+		</edge>
+		<edge from="0" to="4">
+			<attr name="Weight">
+				<int>34</int>
+			</attr>
+		</edge>
+		<edge from="0" to="5">
+			<attr name="Weight">
+				<int>101</int>
+			</attr>
+		</edge>
+		<edge from="0" to="6">
+			<attr name="Weight">
+				<int>101</int>
+			</attr>
+		</edge>
+	</graph>
+</gxl>

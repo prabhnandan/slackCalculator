@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gxl>
+	<graph id="OutTree-Unbalanced-MaxBf-2_Depth_2_CCR_10.0_WeightType_Random">
+		<node id="0">
+			<attr name="Weight">
+				<int>10</int>
+			</attr>
+		</node>
+		<node id="1">
+			<attr name="Weight">
+				<int>5</int>
+			</attr>
+		</node>
+		<node id="2">
+			<attr name="Weight">
+				<int>9</int>
+			</attr>
+		</node>
+		<node id="3">
+			<attr name="Weight">
+				<int>10</int>
+			</attr>
+		</node>
+		<node id="4">
+			<attr name="Weight">
+				<int>7</int>
+			</attr>
+		</node>
+		<node id="5">
+			<attr name="Weight">
+				<int>5</int>
+			</attr>
+		</node>
+		<node id="6">
+			<attr name="Weight">
+				<int>7</int>
+			</attr>
+		</node>
+		<edge from="0" to="1">
+			<attr name="Weight">
+				<int>73</int>
+			</attr>
+		</edge>
+		<edge from="0" to="2">
+			<attr name="Weight">
+				<int>183</int>
+			</attr>
+		</edge>
+		<edge from="1" to="3">
+			<attr name="Weight">
+				<int>55</int>
+			</attr>
+		</edge>
+		<edge from="1" to="4">
+			<attr name="Weight">
+				<int>146</int>
+			</attr>
+		</edge>
+		<edge from="2" to="5">
+			<attr name="Weight">
+				<int>37</int>
+			</attr>
+		</edge>
+		<edge from="2" to="6">
+			<attr name="Weight">
+				<int>37</int>
+			</attr>
+		</edge>
+	</graph>
+</gxl>

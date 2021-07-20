@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gxl>
+	<graph id="Independent_Nodes_11_WeightType_Random">
+		<node id="0">
+			<attr name="Weight">
+				<int>10</int>
+			</attr>
+		</node>
+		<node id="1">
+			<attr name="Weight">
+				<int>3</int>
+			</attr>
+		</node>
+		<node id="2">
+			<attr name="Weight">
+				<int>2</int>
+			</attr>
+		</node>
+		<node id="3">
+			<attr name="Weight">
+				<int>9</int>
+			</attr>
+		</node>
+		<node id="4">
+			<attr name="Weight">
+				<int>9</int>
+			</attr>
+		</node>
+		<node id="5">
+			<attr name="Weight">
+				<int>10</int>
+			</attr>
+		</node>
+		<node id="6">
+			<attr name="Weight">
+				<int>7</int>
+			</attr>
+		</node>
+		<node id="7">
+			<attr name="Weight">
+				<int>3</int>
+			</attr>
+		</node>
+		<node id="8">
+			<attr name="Weight">
+				<int>8</int>
+			</attr>
+		</node>
+		<node id="9">
+			<attr name="Weight">
+				<int>5</int>
+			</attr>
+		</node>
+		<node id="10">
+			<attr name="Weight">
+				<int>10</int>
+			</attr>
+		</node>
+	</graph>
+</gxl>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gxl>
+	<graph id="Join_Nodes_5_CCR_0.1_WeightType_Unit">
+		<node id="0">
+			<attr name="Weight">
+				<int>32</int>
+			</attr>
+		</node>
+		<node id="1">
+			<attr name="Weight">
+				<int>32</int>
+			</attr>
+		</node>
+		<node id="2">
+			<attr name="Weight">
+				<int>32</int>
+			</attr>
+		</node>
+		<node id="3">
+			<attr name="Weight">
+				<int>32</int>
+			</attr>
+		</node>
+		<node id="4">
+			<attr name="Weight">
+				<int>32</int>
+			</attr>
+		</node>
+		<edge from="0" to="4">
+			<attr name="Weight">
+				<int>4</int>
+			</attr>
+		</edge>
+		<edge from="1" to="4">
+			<attr name="Weight">
+				<int>4</int>
+			</attr>
+		</edge>
+		<edge from="2" to="4">
+			<attr name="Weight">
+				<int>4</int>
+			</attr>
+		</edge>
+		<edge from="3" to="4">
+			<attr name="Weight">
+				<int>4</int>
+			</attr>
+		</edge>
+	</graph>
+</gxl>
