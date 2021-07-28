@@ -36,7 +36,7 @@ public class slackCalculationScript {
                         System.out.printf("Progress = %.6f %%\n", progress * 100 / totalCombinations);
                         progress++;
                         try {
-                            Process process = rt.exec("java -jar parcschedule-1.0-jar-with-dependencies.jar -f " + file.getAbsolutePath() + " -o out.gxl -p " + proc + " -priority " + priority + " -placement " + placement);
+                            Process process = rt.exec("java -jar parcschedule-1.0-jar-with-dependencies.jar -f " + file.getAbsolutePath() + " -o " + file.getParent() + "/output/" + file.getName() + "_" + proc + "_" + priority + "_" + placement + ".gxl -p " + proc + " -priority " + priority + " -placement " + placement);
 
                             process.waitFor();
                         } catch (IOException | InterruptedException e) {
@@ -48,7 +48,7 @@ public class slackCalculationScript {
                     for (String merger : mergers) {
                         for (String ordering : orderings) {
                             try {
-                                Process process = rt.exec("java -jar parcschedule-1.0-jar-with-dependencies.jar -f " + file.getAbsolutePath() + " -o out.gxl -p " + proc + " -clusterer " + clusterer + " -merger " + merger + " -ordering " + ordering);
+                                Process process = rt.exec("java -jar parcschedule-1.0-jar-with-dependencies.jar -f " + file.getAbsolutePath() + " -o " + file.getParent() + "/output/" + file.getName() + "_" + proc + "_" + clusterer + "_" + merger + "_" + ordering + ".gxl -p " + proc + " -clusterer " + clusterer + " -merger " + merger + " -ordering " + ordering);
                                 process.waitFor();
                             } catch (IOException | InterruptedException e) {
                                 e.printStackTrace();
