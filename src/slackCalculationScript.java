@@ -28,11 +28,14 @@ public class slackCalculationScript {
         int progress = 1;
 
         for (File file : gxlFiles) {
+            File outputDir = new File(file.getParent() + "/output/");
+            outputDir.mkdir();
             for (int proc : numProcessors) {
                 for (String priority : priorities) {
                     for (String placement : placements) {
+                        String outputFileName = file.getName() + proc + priority + placement;
                         try {
-                            rt.exec("java -jar parcschedule-1.0-jar-with-dependencies.jar -f " + file.getAbsolutePath() + " -o " + file.getParent() + "/output/" + file.getName() + "_" + proc + "_" + priority + "_" + placement + ".gxl -p " + proc + " -priority " + priority + " -placement " + placement).waitFor();
+                            rt.exec("java -jar parcschedule-1.0-jar-with-dependencies.jar -f " + file.getAbsolutePath() + " -o " + file.getParent() + "/output/" + outputFileName + ".gxl -p " + proc + " -priority " + priority + " -placement " + placement).waitFor();
                         } catch (IOException | InterruptedException e) {
                             e.printStackTrace();
                         }
@@ -41,8 +44,9 @@ public class slackCalculationScript {
                 for (String clusterer : clusterers) {
                     for (String merger : mergers) {
                         for (String ordering : orderings) {
+                            String outputFileName = file.getName() + proc + clusterer + merger + orderings;
                             try {
-                                rt.exec("java -jar parcschedule-1.0-jar-with-dependencies.jar -f " + file.getAbsolutePath() + " -o " + file.getParent() + "/output/" + file.getName() + "_" + proc + "_" + clusterer + "_" + merger + "_" + ordering + ".gxl -p " + proc + " -clusterer " + clusterer + " -merger " + merger + " -ordering " + ordering).waitFor();
+                                rt.exec("java -jar parcschedule-1.0-jar-with-dependencies.jar -f " + file.getAbsolutePath() + " -o " + file.getParent() + "/output/" + outputFileName + ".gxl -p " + proc + " -clusterer " + clusterer + " -merger " + merger + " -ordering " + ordering).waitFor();
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             } catch (IOException e) {
