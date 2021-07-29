@@ -53,6 +53,7 @@ public class slackCalculationScript {
                 }
             }
             System.out.println("Progress = "+progress +"/"+gxlFiles.size());
+            progress++;
         }
     }
 }
