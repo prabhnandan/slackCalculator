@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gxl SYSTEM "http://www.gupro.de/GXL/gxl-1.0.dtd">
+<gxl>
+	<graph id="RandomLayered_Nodes_50_CCR_10.00_WeightType_nodes[Gamma - 100.00% Γ(20 0.10)]-edges[Gamma - 100.00% Γ(20 0.10)]_1">
+		<attr name="No of nodes">
+			<int>50</int>
+		</attr>
+		<attr name="No of edges">
+			<int>83</int>
+		</attr>
+		<attr name="Density">
+			<float>1.66</float>
+		</attr>
+		<attr name="CCR">
+			<float>10.0</float>
+		</attr>
+		<attr name="Total sequential time">
+			<int>9815</int>
+		</attr>
+		<node id="0">
+			<attr name="Weight">
+				<int>300</int>
+			</attr>
+		</node>
+		<node id="1">
+			<attr name="Weight">
+				<int>209</int>
+			</attr>
+		</node>
+		<node id="2">
+			<attr name="Weight">
+				<int>170</int>
+			</attr>
+		</node>
+		<node id="3">
+			<attr name="Weight">
+				<int>201</int>
+			</attr>
+		</node>
+		<node id="4">
+			<attr name="Weight">
+				<int>175</int>
+			</attr>
+		</node>
+		<node id="5">
+			<attr name="Weight">
+				<int>215</int>
+			</attr>
+		</node>
+		<node id="6">
+			<attr name="Weight">
+				<int>202</int>
+			</attr>
+		</node>
+		<node id="7">
+			<attr name="Weight">
+				<int>225</int>
+			</attr>
+		</node>
+		<node id="8">
+			<attr name="Weight">
+				<int>164</int>
+			</attr>
+		</node>
+		<node id="9">
+			<attr name="Weight">
+				<int>120</int>
+			</attr>
+		</node>
+		<node id="10">
+			<attr name="Weight">
+				<int>134</int>
+			</attr>
+		</node>
+		<node id="11">
+			<attr name="Weight">
+				<int>131</int>
+			</attr>
+		</node>
+		<node id="12">
+			<attr name="Weight">
+				<int>222</int>
+			</attr>
+		</node>
+		<node id="13">
+			<attr name="Weight">
+				<int>207</int>
+			</attr>
+		</node>
+		<node id="14">
+			<attr name="Weight">
+				<int>197</int>
+			</attr>
+		</node>
+		<node id="15">
+			<attr name="Weight">
+				<int>274</int>
+			</attr>
+		</node>
+		<node id="16">
+			<attr name="Weight">
+				<int>151</int>
+			</attr>
+		</node>
+		<node id="17">
+			<attr name="Weight">
+				<int>176</int>
+			</attr>
+		</node>
+		<node id="18">
+			<attr name="Weight">
+				<int>186</int>
+			</attr>
+		</node>
+		<node id="19">
+			<attr name="Weight">
+				<int>125</int>
+			</attr>
+		</node>
+		<node id="20">
+			<attr name="Weight">
+				<int>267</int>
+			</attr>
+		</node>
+		<node id="21">
+			<attr name="Weight">
+				<int>169</int>
+			</attr>
+		</node>
+		<node id="22">
+			<attr name="Weight">
+				<int>102</int>
+			</attr>
+		</node>
+		<node id="23">
+			<attr name="Weight">
+				<int>227</int>
+			</attr>
+		</node>
+		<node id="24">
+			<attr name="Weight">
+				<int>147</int>
+			</attr>
+		</node>
+		<node id="25">
+			<attr name="Weight">
+				<int>189</int>
+			</attr>
+		</node>
+		<node id="26">
+			<attr name="Weight">
+				<int>154</int>
+			</attr>
+		</node>
+		<node id="27">
+			<attr name="Weight">
+				<int>272</int>
+			</attr>
+		</node>
+		<node id="28">
+			<attr name="Weight">
+				<int>225</int>
+			</attr>
+		</node>
+		<node id="29">
+			<attr name="Weight">
+				<int>241</int>
+			</attr>
+		</node>
+		<node id="30">
+			<attr name="Weight">
+				<int>265</int>
+			</attr>
+		</node>
+		<node id="31">
+			<attr name="Weight">
+				<int>148</int>
+			</attr>
+		</node>
+		<node id="32">
+			<attr name="Weight">
+				<int>193</int>
+			</attr>
+		</node>
+		<node id="33">
+			<attr name="Weight">
+				<int>218</int>
+			</attr>
+		</node>
+		<node id="34">
+			<attr name="Weight">
+				<int>209</int>
+			</attr>
+		</node>
+		<node id="35">
+			<attr name="Weight">
+				<int>157</int>
+			</attr>
+		</node>
+		<node id="36">
+			<attr name="Weight">
+				<int>220</int>
+			</attr>
+		</node>
+		<node id="37">
+			<attr name="Weight">
+				<int>264</int>
+			</attr>
+		</node>
+		<node id="38">
+			<attr name="Weight">
+				<int>210</int>
+			</attr>
+		</node>
+		<node id="39">
+			<attr name="Weight">
+				<int>202</int>
+			</attr>
+		</node>
+		<node id="40">
+			<attr name="Weight">
+				<int>209</int>
+			</attr>
+		</node>
+		<node id="41">
+			<attr name="Weight">
+				<int>274</int>
+			</attr>
+		</node>
+		<node id="42">
+			<attr name="Weight">
+				<int>143</int>
+			</attr>
+		</node>
+		<node id="43">
+			<attr name="Weight">
+				<int>202</int>
+			</attr>
+		</node>
+		<node id="44">
+			<attr name="Weight">
+				<int>165</int>
+			</attr>
+		</node>
+		<node id="45">
+			<attr name="Weight">
+				<int>149</int>
+			</attr>
+		</node>
+		<node id="46">
+			<attr name="Weight">
+				<int>169</int>
+			</attr>
+		</node>
+		<node id="47">
+			<attr name="Weight">
+				<int>249</int>
+			</attr>
+		</node>
+		<node id="48">
+			<attr name="Weight">
+				<int>249</int>
+			</attr>
+		</node>
+		<node id="49">
+			<attr name="Weight">
+				<int>143</int>
+			</attr>
+		</node>
+		<edge from="15" to="31">
+			<attr name="Weight">
+				<int>674</int>
+			</attr>
+		</edge>
+		<edge from="23" to="3">
+			<attr name="Weight">
+				<int>1354</int>
+			</attr>
+		</edge>
+		<edge from="22" to="47">
+			<attr name="Weight">
+				<int>1622</int>
+			</attr>
+		</edge>
+		<edge from="35" to="8">
+			<attr name="Weight">
+				<int>1261</int>
+			</attr>
+		</edge>
+		<edge from="13" to="44">
+			<attr name="Weight">
+				<int>1145</int>
+			</attr>
+		</edge>
+		<edge from="1" to="19">
+			<attr name="Weight">
+				<int>1296</int>
+			</attr>
+		</edge>
+		<edge from="2" to="16">
+			<attr name="Weight">
+				<int>918</int>
+			</attr>
+		</edge>
+		<edge from="13" to="14">
+			<attr name="Weight">
+				<int>1163</int>
+			</attr>
+		</edge>
+		<edge from="42" to="0">
+			<attr name="Weight">
+				<int>1564</int>
+			</attr>
+		</edge>
+		<edge from="9" to="34">
+			<attr name="Weight">
+				<int>814</int>
+			</attr>
+		</edge>
+		<edge from="30" to="26">
+			<attr name="Weight">
+				<int>1459</int>
+			</attr>
+		</edge>
+		<edge from="37" to="33">
+			<attr name="Weight">
+				<int>820</int>
+			</attr>
+		</edge>
+		<edge from="22" to="28">
+			<attr name="Weight">
+				<int>1133</int>
+			</attr>
+		</edge>
+		<edge from="12" to="10">
+			<attr name="Weight">
+				<int>907</int>
+			</attr>
+		</edge>
+		<edge from="47" to="7">
+			<attr name="Weight">
+				<int>1250</int>
+			</attr>
+		</edge>
+		<edge from="21" to="35">
+			<attr name="Weight">
+				<int>1401</int>
+			</attr>
+		</edge>
+		<edge from="4" to="34">
+			<attr name="Weight">
+				<int>1331</int>
+			</attr>
+		</edge>
+		<edge from="14" to="45">
+			<attr name="Weight">
+				<int>1343</int>
+			</attr>
+		</edge>
+		<edge from="13" to="24">
+			<attr name="Weight">
+				<int>1302</int>
+			</attr>
+		</edge>
+		<edge from="32" to="35">
+			<attr name="Weight">
+				<int>1180</int>
+			</attr>
+		</edge>
+		<edge from="21" to="8">
+			<attr name="Weight">
+				<int>1163</int>
+			</attr>
+		</edge>
+		<edge from="22" to="33">
+			<attr name="Weight">
+				<int>692</int>
+			</attr>
+		</edge>
+		<edge from="21" to="31">
+			<attr name="Weight">
+				<int>907</int>
+			</attr>
+		</edge>
+		<edge from="42" to="40">
+			<attr name="Weight">
+				<int>1587</int>
+			</attr>
+		</edge>
+		<edge from="26" to="41">
+			<attr name="Weight">
+				<int>1099</int>
+			</attr>
+		</edge>
+		<edge from="17" to="28">
+			<attr name="Weight">
+				<int>1418</int>
+			</attr>
+		</edge>
+		<edge from="44" to="28">
+			<attr name="Weight">
+				<int>907</int>
+			</attr>
+		</edge>
+		<edge from="4" to="35">
+			<attr name="Weight">
+				<int>1011</int>
+			</attr>
+		</edge>
+		<edge from="13" to="0">
+			<attr name="Weight">
+				<int>1267</int>
+			</attr>
+		</edge>
+		<edge from="15" to="49">
+			<attr name="Weight">
+				<int>1598</int>
+			</attr>
+		</edge>
+		<edge from="12" to="32">
+			<attr name="Weight">
+				<int>1000</int>
+			</attr>
+		</edge>
+		<edge from="10" to="8">
+			<attr name="Weight">
+				<int>1459</int>
+			</attr>
+		</edge>
+		<edge from="12" to="26">
+			<attr name="Weight">
+				<int>1314</int>
+			</attr>
+		</edge>
+		<edge from="48" to="43">
+			<attr name="Weight">
+				<int>1087</int>
+			</attr>
+		</edge>
+		<edge from="4" to="16">
+			<attr name="Weight">
+				<int>1325</int>
+			</attr>
+		</edge>
+		<edge from="13" to="36">
+			<attr name="Weight">
+				<int>1319</int>
+			</attr>
+		</edge>
+		<edge from="22" to="24">
+			<attr name="Weight">
+				<int>756</int>
+			</attr>
+		</edge>
+		<edge from="29" to="35">
+			<attr name="Weight">
+				<int>1075</int>
+			</attr>
+		</edge>
+		<edge from="48" to="19">
+			<attr name="Weight">
+				<int>732</int>
+			</attr>
+		</edge>
+		<edge from="20" to="26">
+			<attr name="Weight">
+				<int>1633</int>
+			</attr>
+		</edge>
+		<edge from="32" to="49">
+			<attr name="Weight">
+				<int>936</int>
+			</attr>
+		</edge>
+		<edge from="13" to="30">
+			<attr name="Weight">
+				<int>1430</int>
+			</attr>
+		</edge>
+		<edge from="23" to="2">
+			<attr name="Weight">
+				<int>1035</int>
+			</attr>
+		</edge>
+		<edge from="46" to="7">
+			<attr name="Weight">
+				<int>1046</int>
+			</attr>
+		</edge>
+		<edge from="17" to="35">
+			<attr name="Weight">
+				<int>1040</int>
+			</attr>
+		</edge>
+		<edge from="30" to="25">
+			<attr name="Weight">
+				<int>1302</int>
+			</attr>
+		</edge>
+		<edge from="10" to="1">
+			<attr name="Weight">
+				<int>889</int>
+			</attr>
+		</edge>
+		<edge from="3" to="38">
+			<attr name="Weight">
+				<int>1122</int>
+			</attr>
+		</edge>
+		<edge from="3" to="0">
+			<attr name="Weight">
+				<int>1273</int>
+			</attr>
+		</edge>
+		<edge from="6" to="20">
+			<attr name="Weight">
+				<int>1122</int>
+			</attr>
+		</edge>
+		<edge from="40" to="25">
+			<attr name="Weight">
+				<int>1099</int>
+			</attr>
+		</edge>
+		<edge from="12" to="43">
+			<attr name="Weight">
+				<int>1250</int>
+			</attr>
+		</edge>
+		<edge from="6" to="45">
+			<attr name="Weight">
+				<int>1256</int>
+			</attr>
+		</edge>
+		<edge from="41" to="38">
+			<attr name="Weight">
+				<int>1209</int>
+			</attr>
+		</edge>
+		<edge from="13" to="21">
+			<attr name="Weight">
+				<int>1343</int>
+			</attr>
+		</edge>
+		<edge from="22" to="49">
+			<attr name="Weight">
+				<int>1040</int>
+			</attr>
+		</edge>
+		<edge from="36" to="33">
+			<attr name="Weight">
+				<int>1232</int>
+			</attr>
+		</edge>
+		<edge from="3" to="1">
+			<attr name="Weight">
+				<int>1093</int>
+			</attr>
+		</edge>
+		<edge from="3" to="2">
+			<attr name="Weight">
+				<int>872</int>
+			</attr>
+		</edge>
+		<edge from="44" to="26">
+			<attr name="Weight">
+				<int>1099</int>
+			</attr>
+		</edge>
+		<edge from="46" to="1">
+			<attr name="Weight">
+				<int>1308</int>
+			</attr>
+		</edge>
+		<edge from="22" to="40">
+			<attr name="Weight">
+				<int>1232</int>
+			</attr>
+		</edge>
+		<edge from="10" to="37">
+			<attr name="Weight">
+				<int>599</int>
+			</attr>
+		</edge>
+		<edge from="40" to="33">
+			<attr name="Weight">
+				<int>1581</int>
+			</attr>
+		</edge>
+		<edge from="6" to="33">
+			<attr name="Weight">
+				<int>1349</int>
+			</attr>
+		</edge>
+		<edge from="48" to="18">
+			<attr name="Weight">
+				<int>1331</int>
+			</attr>
+		</edge>
+		<edge from="28" to="43">
+			<attr name="Weight">
+				<int>1453</int>
+			</attr>
+		</edge>
+		<edge from="31" to="49">
+			<attr name="Weight">
+				<int>1645</int>
+			</attr>
+		</edge>
+		<edge from="37" to="38">
+			<attr name="Weight">
+				<int>1040</int>
+			</attr>
+		</edge>
+		<edge from="24" to="27">
+			<attr name="Weight">
+				<int>1412</int>
+			</attr>
+		</edge>
+		<edge from="45" to="18">
+			<attr name="Weight">
+				<int>1360</int>
+			</attr>
+		</edge>
+		<edge from="22" to="18">
+			<attr name="Weight">
+				<int>1436</int>
+			</attr>
+		</edge>
+		<edge from="17" to="10">
+			<attr name="Weight">
+				<int>1070</int>
+			</attr>
+		</edge>
+		<edge from="47" to="18">
+			<attr name="Weight">
+				<int>791</int>
+			</attr>
+		</edge>
+		<edge from="24" to="18">
+			<attr name="Weight">
+				<int>738</int>
+			</attr>
+		</edge>
+		<edge from="23" to="21">
+			<attr name="Weight">
+				<int>1279</int>
+			</attr>
+		</edge>
+		<edge from="29" to="10">
+			<attr name="Weight">
+				<int>872</int>
+			</attr>
+		</edge>
+		<edge from="13" to="28">
+			<attr name="Weight">
+				<int>1308</int>
+			</attr>
+		</edge>
+		<edge from="2" to="32">
+			<attr name="Weight">
+				<int>942</int>
+			</attr>
+		</edge>
+		<edge from="12" to="38">
+			<attr name="Weight">
+				<int>1430</int>
+			</attr>
+		</edge>
+		<edge from="42" to="8">
+			<attr name="Weight">
+				<int>1401</int>
+			</attr>
+		</edge>
+		<edge from="40" to="7">
+			<attr name="Weight">
+				<int>1511</int>
+			</attr>
+		</edge>
+		<edge from="17" to="14">
+			<attr name="Weight">
+				<int>1093</int>
+			</attr>
+		</edge>
+	</graph>
+</gxl>

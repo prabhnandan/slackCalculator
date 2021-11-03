@@ -7,12 +7,13 @@ import static org.apache.commons.io.FileUtils.listFiles;
 public class slackCalculationScript {
 
     public static void main(String[] args) {
-
         multipleScheduleCalculate("src/graphs/BenchmarkSet");
         multipleScheduleCalculate("src/graphs/listSchedVSclusterSched");
     }
 
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     private static void multipleScheduleCalculate(String folderPath) {
+        new File(folderPath + "/output").mkdir();
         // Get GXL Files in folder
         ArrayList<File> gxlFiles;
         gxlFiles = (ArrayList<File>) listFiles(new File(folderPath), new String[] {"gxl"},true);
@@ -32,7 +33,7 @@ public class slackCalculationScript {
             for (int proc : numProcessors) {
                 for (String priority : priorities) {
                     for (String placement : placements) {
-                        String outputFileName = "output/" + file.getName() + proc + priority + placement + ".gxl";
+                        String outputFileName = folderPath + "/output/" + file.getName() + proc + priority + placement + ".gxl";
                         if (!new File(outputFileName).exists()) {
                             try {
                                 rt.exec("java -jar parcschedule-1.0-jar-with-dependencies.jar -f " + file.getAbsolutePath() + " -o " + outputFileName + " -p " + proc + " -priority " + priority + " -placement " + placement).waitFor();
@@ -45,7 +46,7 @@ public class slackCalculationScript {
                 for (String clusterer : clusterers) {
                     for (String merger : mergers) {
                         for (String ordering : orderings) {
-                            String outputFileName = "output/" + file.getName() + proc + clusterer + merger + ordering + ".gxl";
+                            String outputFileName = folderPath + "/output/" + file.getName() + proc + clusterer + merger + ordering + ".gxl";
                             if (!new File(outputFileName).exists()) {
                                 try {
                                     rt.exec("java -jar parcschedule-1.0-jar-with-dependencies.jar -f " + file.getAbsolutePath() + " -o " + outputFileName + " -p " + proc + " -clusterer " + clusterer + " -merger " + merger + " -ordering " + ordering).waitFor();
